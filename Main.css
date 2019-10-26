@@ -1,0 +1,223 @@
+/* Body and Header */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    margin-top: -11px;
+    margin-bottom: 30px;
+}
+
+header {
+    background: rgb(0, 23, 73);
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+header h1 {
+    padding-top: 30px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.titleText {
+    float: left;
+    padding-left: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 59px;
+}
+
+nav a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+/* Changing Backgrounds */
+
+.neutralBack{
+    background-color: lightblue;
+
+}
+
+.correctBack{
+    background-color: lightgreen;
+
+}
+
+.wrongBack{
+    background-color: lightcoral;
+}
+
+/* Page Text Options */
+
+.pageHeading {
+    color: black;
+    font-family: sans-serif;
+    font-style: bold;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.pageSubheading {
+    color: black;
+    font-family: sans-serif;
+    font-style: bold;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.pageText {
+    color: black;
+    font-family: sans-serif;
+    font-style: bold;
+    font-size: 12pt;
+    text-align: center;
+}
+
+/* Input */
+
+.input {
+    display: block;
+    padding: 5px;
+    font-size: 12pt;
+    width: 400px;
+    margin: 0 auto;
+    color: black;
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+
+/* Leaderboard Submission Popup Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modalContent {
+    background-color: white;
+    margin: 10% 30%;
+    padding: 20px;
+    animation-name: modalOpen;
+    animation-duration: 0.5s;
+
+}
+
+input {
+    display: block;
+    padding: 5px;
+    font-size: 12pt;
+    width: 400px;
+    margin: 0 auto;
+}
+
+    
+.inputWrapper {
+    width: 500px;
+}
+
+
+#closeButton {
+    color: gray;
+    float: right;
+    font-size: 30pt;
+    cursor: pointer;
+}
+
+#closeButton:hover {
+    color: black;
+}
+
+/* Popup Animation */
+
+@keyframes modalOpen {
+    from{ opacity: 0}
+    to{ opacity: 1}
+
+}
+
+/* Making the Leaderboard */
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+th, td {
+    border-bottom: 1px solid black;
+    padding: 15px;
+    font-size: 16pt;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+th {
+    background-color: rgb(0, 23, 73);
+    color: white;
+    height: 50px;
+    
+}
+
+tr:nth-child(even) {
+    background-color: rgb(147, 180, 255);
+
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1096px) {
+
+    .modalContent {
+        background-color: white;
+        margin: 10% auto;
+        padding: 20px;
+        animation-name: modalOpen;
+        animation-duration: 0.5s;
+    
+    }
+    
+    input {
+        display: block;
+        padding: 5px;
+        font-size: 12pt;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-left: 0px;
+        margin-right: 20px;
+    
+    }
+
+}
